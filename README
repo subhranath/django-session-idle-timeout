@@ -11,5 +11,5 @@ Installation instructions:
   - Add 'sessions' to INSTALLED_APPS. (Optional)
   - Add a entry named 'SESSION_IDLE_TIMEOUT' to specify the idle timeout period, in seconds.
 
-That's it, you will receive a session timeout message using the Django message framework in you templates.
+That's it, you will receive a session timeout message using the Django message framework in your templates.
 
