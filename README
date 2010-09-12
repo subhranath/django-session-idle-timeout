@@ -1,0 +1,15 @@
+A Django middleware application to timeout a logged in user session after a specified time period.
+
+Installation instructions:
+- Make sure the following Django apps/middlewares are enabled.
+  - Authentication (http://docs.djangoproject.com/en/dev/topics/auth/)
+  - Sessions (http://docs.djangoproject.com/en/dev/topics/http/sessions/)
+  - Messages framework (http://docs.djangoproject.com/en/dev/ref/contrib/messages/)
+- Place the checked out 'sessions' directory in your project.
+- Make the following entries in your 'settings.py' project module.
+  - Append an entry to the MIDDLEWARE_CLASSES as 'sessions.middleware.SessionIdleTimeout', at the bottom.
+  - Add 'sessions' to INSTALLED_APPS. (Optional)
+  - Add a entry named 'SESSION_IDLE_TIMEOUT' to specify the idle timeout period, in seconds.
+
+That's it, you will receive a session timeout message using the Django message framework in you templates.
+
